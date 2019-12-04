@@ -1,6 +1,7 @@
 (library
   (name slist)
   (public_name slist)
+  (modules slist)
   (libraries batteries))
 
 ;; never installed executables
