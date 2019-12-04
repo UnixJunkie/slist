@@ -24,23 +24,23 @@ let random_level () =
 let create () =
   failwith "not implemented yet"
 
-let of_list l =
+let of_list _l =
   failwith "not implemented yet"
 
-let to_list t =
+let to_list _t =
   failwith "not implemented yet"
 
-let add cmp l x =
+let add _cmp _l _x =
   failwith "not implemented yet"
 
-let at l i =
+let at _l _i =
   failwith "not implemented yet"
 
-let find cmp l x =
+let find _cmp _l _x =
   failwith "not implemented yet"
 
-let remove cmp l x =
+let remove _cmp _l _x =
   failwith "not implemented yet"
 
-let length l =
+let length _l =
   failwith "not implemented yet"
