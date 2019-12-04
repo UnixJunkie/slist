@@ -1,0 +1,10 @@
+(library
+  (name slist)
+  (public_name slist)
+  (libraries batteries))
+
+;; never installed executables
+(executables
+  (names test)
+  (modules test)
+  (libraries slist))
