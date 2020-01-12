@@ -1,11 +1,11 @@
 (library
-  (name slist)
-  (public_name slist)
-  (modules skip_list)
+  (name skip_list)
+  (public_name skip_list)
+  (modules pure)
   (libraries batteries))
 
 ;; never installed executables
 (executables
   (names test)
   (modules test)
-  (libraries slist))
+  (libraries skip_list))
