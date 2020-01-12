@@ -436,7 +436,7 @@ struct
 
   let rec max_elt = function
       Bottom -> raise Not_found
-    | Level (lvl,_,right) -> max_elt_skip right
+    | Level (_lvl,_,right) -> max_elt_skip right
   and max_elt_skip = function
       Node (_,_,right) -> max_elt_skip right
     | Last (elt,down) -> 
@@ -445,7 +445,7 @@ struct
 
   let rec min_elt = function
       Bottom -> raise Not_found
-    | Level (lvl,down,right) -> 
+    | Level (_lvl,down,right) -> 
 	try min_elt down 
 	with Not_found -> min_elt_skip right
   and min_elt_skip = function
@@ -472,9 +472,8 @@ struct
 		append i "|"
 	      done;
 	      append lvl "\\";
-	      let dw= !cur_width + 1 in
-		paux (lvl-1) down;
-		paux_skip lvl right
+	      paux (lvl-1) down;
+	      paux_skip lvl right
 	and paux_skip plvl = function
 	    Node(elt,down,right) ->
 	      fill plvl "-";
