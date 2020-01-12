@@ -499,11 +499,10 @@ end
 (*
 
    #load "skiplist.cmo";;
-   module M=struct type t=int let compare=compare end;;
-   module IS=Skiplist.Make(M);;
-   let pr=IS.print string_of_int;;
+   module M = struct type t = int let compare = BatInt.compare end;;
+   module IS = Skiplist.Make(M);;
+   let pr = IS.print string_of_int;;
    #install_printer pr;;
    open IS;;
-
 
 *)
